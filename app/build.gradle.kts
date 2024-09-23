@@ -19,6 +19,7 @@ plugins {
     alias(libs.plugins.kotlin.android)
     alias(libs.plugins.compose)
     alias(libs.plugins.secrets)
+    alias(libs.plugins.google.services)
 }
 
 android {
@@ -140,6 +141,9 @@ dependencies {
     implementation(libs.androidx.window)
 
     implementation(libs.google.android.material)
+
+    implementation(libs.vertex.ai)
+    implementation(platform(libs.firebase.bom))
 
     androidTestImplementation(libs.junit)
     androidTestImplementation(libs.androidx.test.core)
