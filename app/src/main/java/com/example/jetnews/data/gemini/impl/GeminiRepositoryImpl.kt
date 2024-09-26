@@ -45,8 +45,9 @@ class GeminiRepositoryImpl: GeminiRepository {
 
     override suspend fun summarizePost(post: Post): String? {
         val stringBuilder = StringBuilder()
-        post.paragraphs.forEach {
-            stringBuilder.append(it.text)
+
+        for (paragraph in post.paragraphs) {
+            stringBuilder.append(paragraph.text)
         }
 
         val prompt =
