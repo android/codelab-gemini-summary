@@ -19,7 +19,7 @@ package com.example.jetnews.data.gemini.impl
 import com.example.jetnews.data.gemini.GeminiRepository
 import com.example.jetnews.model.Post
 import com.google.firebase.Firebase
-import com.google.firebase.vertexai.type.BlockThreshold
+import com.google.firebase.vertexai.type.HarmBlockThreshold
 import com.google.firebase.vertexai.type.HarmCategory
 import com.google.firebase.vertexai.type.SafetySetting
 import com.google.firebase.vertexai.type.generationConfig
@@ -36,10 +36,10 @@ class GeminiRepositoryImpl: GeminiRepository {
                 temperature = 0f
             },
             safetySettings = listOf(
-                SafetySetting(HarmCategory.HARASSMENT, BlockThreshold.LOW_AND_ABOVE),
-                SafetySetting(HarmCategory.HATE_SPEECH, BlockThreshold.LOW_AND_ABOVE),
-                SafetySetting(HarmCategory.SEXUALLY_EXPLICIT, BlockThreshold.LOW_AND_ABOVE),
-                SafetySetting(HarmCategory.DANGEROUS_CONTENT, BlockThreshold.LOW_AND_ABOVE),
+                SafetySetting(HarmCategory.HARASSMENT, HarmBlockThreshold.LOW_AND_ABOVE),
+                SafetySetting(HarmCategory.HATE_SPEECH, HarmBlockThreshold.LOW_AND_ABOVE),
+                SafetySetting(HarmCategory.SEXUALLY_EXPLICIT, HarmBlockThreshold.LOW_AND_ABOVE),
+                SafetySetting(HarmCategory.DANGEROUS_CONTENT, HarmBlockThreshold.LOW_AND_ABOVE),
             )
         )
 

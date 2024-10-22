@@ -58,8 +58,8 @@ secrets = "2.0.1"
 # @keep
 targetSdk = "33"
 version-catalog-update = "0.8.4"
-vertex-ai = "16.0.0-beta04"
-firebase-bom = "33.2.0"
+vertex-ai = "16.0.0"
+firebase-bom = "33.4.0"
 google-service = "4.4.2"
 
 [libraries]
